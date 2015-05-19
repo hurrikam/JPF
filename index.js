@@ -6,4 +6,12 @@
 window.onload = function(e) {
     var bindingSpan = document.getElementById("bindingSpan");
     Jpf.setElementBindingSource(bindingSpan, globalTestObject);
+
+    var listElement = document.getElementById("list");
+    var list = new List(listElement);
+    list.items = [];
+    for (var i = 0; i < 100; i++) {
+        list.items.push(i);
+    }
+    list.scrollTo(11);
 };
